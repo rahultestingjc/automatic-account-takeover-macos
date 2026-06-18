@@ -53,17 +53,12 @@ devices show up in.
 
 - 🔗 **Automatic account takeover & binding** — links the existing local macOS account to the
   correct JumpCloud user with no manual admin lookup.
-- ⏳ **Waits for a real console user** — skips `loginwindow`, `root`, and `_mbsetupuser`, and
-  polls until an interactive user actually owns the console, so it never prompts an empty desk.
 - 🔐 **Secure Token gate** — only proceeds if `_jumpcloudserviceaccount` exists **and** has
   Secure Token enabled, avoiding half-bound states on Macs that aren't ready.
 - 🧠 **Case-preserving username reconciliation** — compares usernames case-insensitively but
   writes back the user's original case via `systemUsername`.
-- 🔁 **Resilient API layer** — retries on network errors and HTTP 5xx with backoff, and is
-  idempotent (treats an existing binding `409` as success).
 - 🧾 **Diagnostic breadcrumbs** — on failure, appends a timestamped note to the device's
   JumpCloud description (without clobbering existing content) and logs everything locally.
-- 🪶 **Zero heavy dependencies** — pure Bash + `curl` + `osascript`; no `jq` or Python required.
 
 ---
 
@@ -85,8 +80,7 @@ genuinely ready, and surfaces any failure to the user while logging diagnostics.
 flowchart TD
     A[JumpCloud runs command as root] --> B{Primary user already set?}
     B -- Yes --> Z[Exit: already bound]
-    B -- No --> C[Startup delay + wait for real console user]
-    C --> D{_jumpcloudserviceaccount has Secure Token?}
+    B -- No --> D{_jumpcloudserviceaccount has Secure Token?}
     D -- No --> Y[Exit: not ready]
     D -- Yes --> E[Prompt console user for JumpCloud email]
     E --> F[Look up JumpCloud user by email]
