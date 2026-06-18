@@ -1,0 +1,30 @@
+# ---- Secrets / credentials (never commit) ----
+*.key
+*.pem
+*.env
+.env
+.env.*
+secrets.*
+*apikey*
+*api_key*
+*credentials*
+
+# ---- JumpCloud runtime artifacts ----
+jc_bind.log
+jc_user_email.txt
+*.log
+
+# ---- macOS noise ----
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# ---- Editor / IDE ----
+.vscode/
+.idea/
+*.swp
+*~
+
+# ---- Local tooling ----
+.claude/
