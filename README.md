@@ -108,12 +108,13 @@ flowchart TD
 
 The entire experience for the end user is two simple dialogs — enter an email, then confirm.
 
-<!--
-  📸 SCREENSHOT PLACEHOLDER
-  Add macOS screenshots of the osascript dialogs to docs/screenshots/ and
-  reference them below (e.g. email-prompt.png and success-dialog.png).
--->
-*📸 Screenshots coming soon — add the macOS email prompt and success dialog here.*
+<div align="center">
+
+| Step 1 — Enter email | Step 2 — Success |
+|:---:|:---:|
+| ![Email prompt](docs/screenshots/email-prompt.png) | ![Success dialog](docs/screenshots/success-dialog.png) |
+
+</div>
 
 ---
 
