@@ -20,7 +20,7 @@ EMAIL_FILE="/var/tmp/jc_user_email.txt"
 LOG_FILE="/var/log/jc_bind.log"
 
 # Timing
-START_DELAY_SECONDS=45                # initial wait before doing anything
+START_DELAY_SECONDS=5                 # initial wait before doing anything
 CONSOLE_USER_WAIT_MAX=600             # max seconds to keep polling for a real console user
 CONSOLE_USER_WAIT_INTERVAL=10         # poll interval during that wait
 
