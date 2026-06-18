@@ -192,6 +192,9 @@ PRIMARY_USER_ID={{device.primary_user_id}}
 > injected only at dispatch time. For manual testing, export the values as environment
 > variables and lock the script down (`root:wheel`, `700`).
 
+> 🌍 **EU-region tenants:** if your JumpCloud org is in the EU region, change `JC_BASE` in the
+> script from `https://console.jumpcloud.com` to `https://console.eu.jumpcloud.com`.
+
 ---
 
 ## Output & logging

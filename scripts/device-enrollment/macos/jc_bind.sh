@@ -14,6 +14,7 @@ API_KEY={{Apikey}}
 ORG_ID={{OrgID}}
 SYSTEM_ID={{device.id}}
 PRIMARY_USER_ID={{device.primary_user_id}}  # Non-empty/non-zero = already bound; skip entire script.
+# EU-region tenants: change this to https://console.eu.jumpcloud.com
 JC_BASE="https://console.jumpcloud.com"
 EMAIL_FILE="/var/tmp/jc_user_email.txt"
 LOG_FILE="/var/log/jc_bind.log"
