@@ -1,0 +1,8 @@
+# Ensure shell scripts always use LF, regardless of OS / autocrlf settings.
+*.sh text eol=lf
+
+# Treat screenshots as binary.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
